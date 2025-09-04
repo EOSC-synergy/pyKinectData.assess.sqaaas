@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/GuillermoDiazSM/pyKinectData:
+      branch: main
+      repo: https://github.com/GuillermoDiazSM/pyKinectData
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/GuillermoDiazSM/pyKinectData git:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-sangria-toad.sh
+        container: qc.acc_hilly-amethyst-dodo
+  QC.Doc:
+    repos:
+      github.com/GuillermoDiazSM/pyKinectData find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-puce-bobcat.sh
+        container: qc.doc_hilly-olive-tang
+      github.com/GuillermoDiazSM/pyKinectData git:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-cream-goose.sh
+        container: qc.doc_stinky-dandelion-salamander
+      github.com/GuillermoDiazSM/pyKinectData markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-malachite-wolf.sh
+        container: qc.doc_lovely-cobalt-balinese
+  QC.Lic:
+    repos:
+      github.com/GuillermoDiazSM/pyKinectData licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-ultramarine-butterfly.sh
+        container: qc.lic_stinky-pear-bulldog
+  QC.Ver:
+    repos:
+      github.com/GuillermoDiazSM/pyKinectData get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-apricot-toad.sh
+        container: qc.ver_frumpy-saffron-cat
+timeout: 5400
