@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/GuillermoDiazSM/pyKinectData git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-sangria-toad.sh
-        container: qc.acc_hilly-amethyst-dodo
+        - /usr/bin/env sh .sqa/script.gloppy-cyan-insect.sh
+        container: qc.acc_greasy-tangerine-hamster
   QC.Doc:
     repos:
       github.com/GuillermoDiazSM/pyKinectData find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-puce-bobcat.sh
-        container: qc.doc_hilly-olive-tang
+        - /usr/bin/env sh .sqa/script.zippy-beige-bongo.sh
+        container: qc.doc_grumpy-chartreuse-loon
       github.com/GuillermoDiazSM/pyKinectData git:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-cream-goose.sh
-        container: qc.doc_stinky-dandelion-salamander
+        - /usr/bin/env sh .sqa/script.whiny-sangria-caterpillar.sh
+        container: qc.doc_shaky-vermilion-ferret
       github.com/GuillermoDiazSM/pyKinectData markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-malachite-wolf.sh
-        container: qc.doc_lovely-cobalt-balinese
+        - /usr/bin/env sh .sqa/script.hilly-mustard-heron.sh
+        container: qc.doc_wiggy-seashell-maltese
   QC.Lic:
     repos:
       github.com/GuillermoDiazSM/pyKinectData licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-ultramarine-butterfly.sh
-        container: qc.lic_stinky-pear-bulldog
+        - /usr/bin/env sh .sqa/script.flaky-cerise-moorhen.sh
+        container: qc.lic_wiggy-goldenrod-tapir
   QC.Ver:
     repos:
       github.com/GuillermoDiazSM/pyKinectData get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-apricot-toad.sh
-        container: qc.ver_frumpy-saffron-cat
+        - /usr/bin/env sh .sqa/script.shaggy-magnolia-echidna.sh
+        container: qc.ver_frumpy-sangria-fly
 timeout: 5400
